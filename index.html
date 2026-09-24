@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dasar Privasi | Privacy Policy - NurQuran</title>
+  <meta name="description" content="Dasar Privasi rasmi aplikasi NurQuran – maklumat tentang cara data anda dikendalikan.">
   <style>
     :root {
       --primary: #1E6FBA;
@@ -14,6 +15,9 @@
       --text-muted: #475569;
       --border: #E2E8F0;
       --teal: #0D9488;
+      --accent-bg: rgba(30, 111, 186, 0.07);
+      --warn-bg: rgba(245, 158, 11, 0.08);
+      --warn-border: rgba(245, 158, 11, 0.3);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -23,6 +27,9 @@
         --text: #F8FAFC;
         --text-muted: #94A3B8;
         --border: #334155;
+        --accent-bg: rgba(30, 111, 186, 0.12);
+        --warn-bg: rgba(245, 158, 11, 0.1);
+        --warn-border: rgba(245, 158, 11, 0.25);
       }
     }
 
@@ -36,7 +43,7 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
       padding-bottom: 60px;
     }
 
@@ -44,21 +51,27 @@
       background: linear-gradient(135deg, #1E6FBA, #0D9488);
       color: #FFFFFF;
       text-align: center;
-      padding: 40px 20px 30px;
+      padding: 44px 20px 32px;
       border-bottom-left-radius: 28px;
       border-bottom-right-radius: 28px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .header-icon {
+      font-size: 36px;
+      margin-bottom: 8px;
     }
 
     header h1 {
       font-size: 26px;
       font-weight: 800;
       margin-bottom: 6px;
+      letter-spacing: -0.3px;
     }
 
     header p {
-      font-size: 14px;
-      opacity: 0.9;
+      font-size: 13px;
+      opacity: 0.88;
     }
 
     .container {
@@ -67,19 +80,18 @@
       padding: 0 16px;
     }
 
-    /* Tab Penukar Bahasa */
     .lang-tabs {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin: 20px 0 16px;
+      gap: 8px;
+      margin: 22px 0 16px;
       flex-wrap: wrap;
     }
 
     .lang-btn {
       background-color: var(--card-bg);
       color: var(--text-muted);
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
       padding: 8px 18px;
       border-radius: 12px;
       cursor: pointer;
@@ -92,34 +104,44 @@
       background-color: var(--primary);
       color: #FFFFFF;
       border-color: var(--primary);
-      box-shadow: 0 2px 8px rgba(30, 111, 186, 0.3);
+      box-shadow: 0 3px 10px rgba(30, 111, 186, 0.35);
     }
 
     .effective-badge {
-      display: inline-block;
-      background-color: rgba(30, 111, 186, 0.1);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: var(--accent-bg);
       color: var(--primary);
       padding: 6px 14px;
       border-radius: 8px;
       font-size: 12px;
       font-weight: 700;
       margin-bottom: 16px;
+      border: 1px solid rgba(30, 111, 186, 0.2);
     }
 
     .section-card {
       background-color: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 20px;
+      padding: 22px 20px;
       margin-bottom: 14px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     }
 
     .section-card h2 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
-      color: var(--text);
-      margin-bottom: 10px;
+      color: var(--primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-card h2 .icon {
+      font-size: 18px;
     }
 
     .section-card p {
@@ -132,35 +154,70 @@
       margin-bottom: 0;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
+    ul, ol {
+      padding-left: 22px;
       margin-bottom: 10px;
     }
 
-    ul li {
+    ul li, ol li {
       font-size: 13px;
       color: var(--text-muted);
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
 
     .notice {
-      color: var(--teal);
+      background-color: rgba(13, 148, 136, 0.08);
+      border-left: 3px solid var(--teal);
+      color: #0b8177;
       font-size: 12.5px;
-      font-style: italic;
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      margin-top: 8px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .notice { color: #2dd4bf; }
     }
 
     .dev-box {
-      background-color: rgba(13, 148, 136, 0.08);
-      border: 1px solid rgba(13, 148, 136, 0.2);
+      background-color: var(--accent-bg);
+      border: 1px solid rgba(30, 111, 186, 0.18);
       border-radius: 12px;
-      padding: 12px 16px;
-      margin-top: 10px;
+      padding: 14px 16px;
+      margin-top: 12px;
     }
 
     .dev-box p {
-      margin-bottom: 4px;
+      margin-bottom: 5px !important;
       font-size: 13px;
+    }
+
+    .dev-box p:last-child { margin-bottom: 0 !important; }
+
+    .perm-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 10px;
+    }
+
+    .perm-table th {
+      background-color: var(--accent-bg);
+      color: var(--primary);
+      padding: 8px 10px;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    .perm-table td {
+      padding: 8px 10px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .perm-table tr:hover td {
+      background-color: var(--accent-bg);
     }
 
     .email-link {
@@ -173,11 +230,42 @@
       text-decoration: underline;
     }
 
+    .third-party-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .third-party-item:last-child {
+      border-bottom: none;
+    }
+
+    .third-party-item .tp-icon {
+      font-size: 22px;
+      min-width: 28px;
+      text-align: center;
+    }
+
+    .third-party-item .tp-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .third-party-item .tp-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
     footer {
       text-align: center;
       margin-top: 30px;
       font-size: 12px;
       color: var(--text-muted);
+      line-height: 1.8;
     }
 
     .lang-content {
@@ -187,207 +275,610 @@
     .lang-content.active {
       display: block;
     }
+
+    code {
+      background: var(--accent-bg);
+      color: var(--primary);
+      padding: 1px 6px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-family: monospace;
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <div class="header-icon">&#128274;</div>
     <h1 id="header-title">Dasar Privasi</h1>
-    <p>Aplikasi NurQuran &bull; Huawei AppGallery</p>
+    <p>Aplikasi NurQuran &bull; Google Play Store &amp; Huawei AppGallery</p>
   </header>
 
   <div class="container">
-    <!-- Butang Pilihan Bahasa -->
     <div class="lang-tabs">
-      <button class="lang-btn active" onclick="switchLang('ms')">Bahasa Melayu</button>
-      <button class="lang-btn" onclick="switchLang('en')">English</button>
-      <button class="lang-btn" onclick="switchLang('zh')">中文 (Chinese)</button>
+      <button class="lang-btn active" onclick="switchLang('ms')">&#127474;&#127486; Bahasa Melayu</button>
+      <button class="lang-btn" onclick="switchLang('en')">&#127468;&#127463; English</button>
+      <button class="lang-btn" onclick="switchLang('zh')">&#127464;&#127475; &#20013;&#25991;</button>
     </div>
 
-    <!-- ======================================================== -->
-    <!-- 🇲🇾 KANDUNGAN BAHASA MELAYU                               -->
-    <!-- ======================================================== -->
+    <!-- ================================================================ -->
+    <!-- BAHASA MELAYU                                                     -->
+    <!-- ================================================================ -->
     <div id="content-ms" class="lang-content active">
-      <div class="effective-badge">Tarikh Kuat Kuasa: 1 September 2026</div>
+      <div class="effective-badge">&#128197; Tarikh Kuat Kuasa: 1 September 2026</div>
 
       <div class="section-card">
-        <h2>1. Pengenalan & Maklumat Pembangun</h2>
-        <p>Aplikasi <strong>NurQuran</strong> dibangunkan dan diuruskan sepenuhnya oleh <strong>ZULFIKAR BIN AZIZUL</strong> ("Pembangun"). Kami komited dalam melindungi privasi anda. Dasar Privasi ini menerangkan pengendalian data bagi aplikasi NurQuran yang diedarkan melalui platform rasmi Huawei AppGallery.</p>
+        <h2><span class="icon">&#128203;</span> 1. Pengenalan &amp; Maklumat Pembangun</h2>
+        <p>Aplikasi <strong>NurQuran</strong> dibangunkan dan diuruskan sepenuhnya oleh <strong>ZULFIKAR BIN AZIZUL</strong> ("Pembangun"), seorang pembangun persendirian yang berdaftar dan beroperasi di Malaysia. Kami menghormati dan komited sepenuhnya dalam melindungi privasi pengguna.</p>
+        <p>Dasar Privasi ini menerangkan dengan terperinci bagaimana data anda dikumpul, digunakan, disimpan dan dilindungi semasa menggunakan aplikasi NurQuran yang diterbitkan melalui <strong>Google Play Store</strong> dan <strong>Huawei AppGallery</strong>.</p>
+        <p>Dengan memuat turun atau menggunakan aplikasi NurQuran, anda bersetuju dengan terma Dasar Privasi ini.</p>
         <div class="dev-box">
           <p><strong>Pembangun Rasmi:</strong> ZULFIKAR BIN AZIZUL</p>
           <p><strong>Aplikasi:</strong> NurQuran</p>
           <p><strong>Emel Rasmi:</strong> <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+          <p><strong>Negara:</strong> Malaysia</p>
         </div>
       </div>
 
       <div class="section-card">
-        <h2>2. Tujuan Pengumpulan Data: Fungsi Aplikasi (App Functionality)</h2>
-        <p>Aplikasi hanya memproses data terhad semata-mata untuk tujuan <strong>Fungsi Aplikasi (App Functionality)</strong> bagi menyokong ibadah anda:</p>
+        <h2><span class="icon">&#128230;</span> 2. Data yang Kami Kumpul</h2>
+        <p>NurQuran <strong>tidak mengumpul</strong> sebarang maklumat peribadi yang boleh mengenal pasti anda secara langsung. Namun, data berikut mungkin diproses secara setempat atau oleh pihak ketiga:</p>
         <ul>
-          <li><strong>Maklumat Lokasi GPS (Precise & Approximate Location):</strong> Digunakan untuk menentukan zon waktu solat rasmi Malaysia (JAKIM) dan mengira sudut kompas arah Kiblat tepat dari kedudukan anda. Diproses secara setempat (local device) sahaja dan <em>tidak dipautkan kepada identiti pengguna</em>.</li>
-          <li><strong>Akses Foto & Galeri (Photos):</strong> Digunakan hanya apabila anda memilih sendiri gambar untuk avatar profil anda. Gambar disimpan secara setempat dalam peranti anda sahaja.</li>
+          <li><strong>Data Lokasi (GPS):</strong> Koordinat diproses secara tempatan untuk waktu solat &amp; arah kiblat. Tidak disimpan di pelayan luar.</li>
+          <li><strong>Data Penggunaan Apl:</strong> Penanda buku, kemajuan khatam, rekod tasbih, pilihan fon — disimpan di peranti anda sahaja.</li>
+          <li><strong>Maklumat Pembelian:</strong> Diuruskan sepenuhnya oleh Google Play Billing atau Huawei IAP. Kami tidak menerima atau menyimpan data kewangan anda.</li>
+          <li><strong>Data Diagnostik Crash:</strong> Melalui Expo / React Native, laporan ralat asas mungkin dikongsi secara tanpa nama untuk penambahbaikan apl.</li>
         </ul>
-        <p class="notice">* Aplikasi ini TIDAK mengumpul data untuk tujuan analisis tingkah laku (Analytics), pemperibadian produk (Product Personalization), pemindahan rentas sempadan, atau perkongsian dengan pihak ketiga.</p>
+        <div class="notice">&#9989; NurQuran tidak meminta pendaftaran akaun, tidak menyimpan nama, e-mel, nombor telefon atau maklumat peribadi lain di pelayan kami.</div>
       </div>
 
       <div class="section-card">
-        <h2>3. Tiada Iklan Pihak Ketiga (Ad-Free)</h2>
-        <p>Aplikasi NurQuran beroperasi <strong>tanpa sebarang rangkaian iklan pihak ketiga</strong> (seperti SDK iklan luaran). Kami tidak mengumpul pengenalan pengiklanan peranti (Advertising ID/OAID) untuk tujuan penjejakan atau pemasaran komersial.</p>
+        <h2><span class="icon">&#128737;&#65039;</span> 3. Kebenaran yang Diperlukan &amp; Tujuannya</h2>
+        <p>Jadual berikut menerangkan setiap kebenaran Android yang digunakan oleh aplikasi NurQuran:</p>
+        <table class="perm-table">
+          <tr>
+            <th>Kebenaran</th>
+            <th>Tujuan</th>
+          </tr>
+          <tr>
+            <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
+            <td>Menentukan zon waktu solat JAKIM &amp; mengira sudut arah kiblat berdasarkan koordinat semasa anda.</td>
+          </tr>
+          <tr>
+            <td><code>POST_NOTIFICATIONS</code></td>
+            <td>Menghantar notifikasi peringatan waktu solat kepada anda.</td>
+          </tr>
+          <tr>
+            <td><code>SCHEDULE_EXACT_ALARM</code><br><code>USE_EXACT_ALARM</code></td>
+            <td>Menjadualkan penggera azan tepat pada masa yang ditetapkan.</td>
+          </tr>
+          <tr>
+            <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+            <td>Memulihkan semula penggera azan terjadual selepas peranti dimulakan semula.</td>
+          </tr>
+          <tr>
+            <td><code>INTERNET</code></td>
+            <td>Menyambung ke API waktu solat (e-solat.com.my) &amp; memuat turun kemas kini kandungan apl jika perlu.</td>
+          </tr>
+          <tr>
+            <td><code>VIBRATE</code></td>
+            <td>Getaran pilihan semasa notifikasi azan diterima.</td>
+          </tr>
+        </table>
+        <div class="notice">&#9888;&#65039; Tiada kebenaran yang digunakan untuk tujuan pengiklanan, penjejakan iklan, atau profiling pengguna.</div>
       </div>
 
       <div class="section-card">
-        <h2>4. Pemberitahuan Notifikasi & Penggera Azan</h2>
-        <p>Aplikasi menggunakan kebenaran <em>POST_NOTIFICATIONS</em> dan <em>SCHEDULE_EXACT_ALARM</em> bagi membolehkan sistem peranti memainkan laungan azan dan peringatan solat fardhu tepat pada waktunya. Tetapan ini boleh dihidupkan atau dimatikan pada bila-bila masa melalui tetapan profil atau skrin solat.</p>
+        <h2><span class="icon">&#128190;</span> 4. Penyimpanan Data Tempatan (Offline Storage)</h2>
+        <p>Semua data yang dijana oleh penggunaan aplikasi ini disimpan secara <strong>eksklusif di dalam peranti anda</strong> menggunakan <em>AsyncStorage</em> (React Native) dan SQLite setempat. Ini termasuk:</p>
+        <ul>
+          <li>Penanda Buku (Bookmark) ayat &amp; surah Al-Quran</li>
+          <li>Sejarah kemajuan Khatam Al-Quran</li>
+          <li>Rekod kaunter Tasbih &amp; zikir harian</li>
+          <li>Pilihan fon Arab &amp; saiz teks</li>
+          <li>Tetapan peribadi &amp; tema warna pilihan anda</li>
+        </ul>
+        <p>Data ini <strong>tidak pernah dihantar</strong> ke mana-mana pelayan luaran tanpa kebenaran eksplisit anda.</p>
       </div>
 
       <div class="section-card">
-        <h2>5. Pembayaran Selamat Melalui Huawei Pay (In-App Purchases)</h2>
-        <p>Pembelian ciri lesen seumur hidup NurQuran PRO diuruskan secara eksklusif dan selamat melalui gerbang pembayaran rasmi <strong>Huawei In-App Purchases (Huawei IAP / Huawei Pay)</strong>. Pihak NurQuran dan pembangun tidak mengumpul, memproses, atau menyimpan sebarang nombor kad kredit, kata laluan perbankan, atau data kewangan anda.</p>
+        <h2><span class="icon">&#128279;</span> 5. Perkhidmatan Pihak Ketiga</h2>
+        <p>Aplikasi NurQuran mungkin menggunakan atau berinteraksi dengan perkhidmatan pihak ketiga berikut. Setiap perkhidmatan mempunyai Dasar Privasi masing-masing:</p>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128309;</div>
+          <div>
+            <div class="tp-name">Google Play Billing</div>
+            <div class="tp-desc">Memproses transaksi pembelian NurQuran PRO. Dasar Privasi: <a class="email-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128308;</div>
+          <div>
+            <div class="tp-name">Huawei In-App Purchases (IAP)</div>
+            <div class="tp-desc">Memproses transaksi pembelian untuk pengguna Huawei AppGallery. Dasar Privasi: <a class="email-link" href="https://consumer.huawei.com/en/privacy/privacy-policy/" target="_blank">consumer.huawei.com</a></div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128994;</div>
+          <div>
+            <div class="tp-name">e-Solat API (JAKIM)</div>
+            <div class="tp-desc">API waktu solat rasmi Malaysia oleh JAKIM (jakim.gov.my). Hanya koordinat zon dihantar untuk mendapatkan jadual waktu solat.</div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#9899;</div>
+          <div>
+            <div class="tp-name">Expo / React Native</div>
+            <div class="tp-desc">Rangka kerja pembangunan apl. Laporan diagnostik tanpa nama mungkin dikumpul untuk tujuan pembaikan teknologi. Dasar Privasi: <a class="email-link" href="https://expo.dev/privacy" target="_blank">expo.dev/privacy</a></div>
+          </div>
+        </div>
+
+        <div class="notice">&#128274; Kami tidak menggunakan sebarang SDK pengiklanan (seperti AdMob, Meta Ads) atau SDK penjejakan pengguna.</div>
       </div>
 
       <div class="section-card">
-        <h2>6. Penyimpanan Data Tempatan & Hak Pemadaman (Data Deletion)</h2>
-        <p>Segala kemajuan bacaan Al-Quran, rekod penanda buku (Bookmarks), kiraan Tasbih, dan sejarah khatam disimpan secara peribadi di dalam storan luar talian peranti anda (<em>AsyncStorage</em>). Anda boleh memadamkan semua rekod ini pada bila-bila masa melalui menu <strong>Profil &gt; Tetapkan Semula Data</strong> di dalam aplikasi.</p>
+        <h2><span class="icon">&#128179;</span> 6. Pembayaran Selamat (NurQuran PRO)</h2>
+        <p>Semua transaksi pembelian lesen seumur hidup <strong>NurQuran PRO</strong> diuruskan dan disahkan secara selamat melalui platform rasmi pihak ketiga, iaitu:</p>
+        <ul>
+          <li><strong>Google Play Billing</strong> — untuk pengguna Android melalui Google Play Store</li>
+          <li><strong>Huawei In-App Purchases (IAP)</strong> — untuk pengguna Huawei AppGallery</li>
+        </ul>
+        <p>Pembangun <strong>tidak pernah</strong> melihat, menyimpan, atau memproses maklumat kad kredit/debit atau butiran kewangan anda. Sebarang soalan berkaitan pembayaran perlu dirujuk terus kepada Google Play atau Huawei.</p>
       </div>
 
       <div class="section-card">
-        <h2>7. Hubungi Pembangun</h2>
-        <p>Sekiranya anda mempunyai sebarang pertanyaan atau memerlukan bantuan berkaitan Dasar Privasi ini, sila hubungi pihak pembangun rasmi:</p>
-        <p><strong>Pembangun:</strong> ZULFIKAR BIN AZIZUL</p>
-        <p>✉️ <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+        <h2><span class="icon">&#128465;&#65039;</span> 7. Hak Anda &amp; Pemadaman Data</h2>
+        <p>Anda mempunyai kawalan penuh ke atas data peribadi anda. Hak-hak anda termasuk:</p>
+        <ul>
+          <li><strong>Hak Akses:</strong> Anda boleh melihat semua data yang disimpan dalam aplikasi pada bila-bila masa.</li>
+          <li><strong>Hak Pemadaman:</strong> Anda boleh mengosongkan semua data (penanda buku, rekod zikir, sejarah khatam) melalui menu <strong>Profil &gt; Tetapkan Semula Data</strong> dalam aplikasi.</li>
+          <li><strong>Hak Menarik Kebenaran:</strong> Anda boleh menarik balik sebarang kebenaran (lokasi, notifikasi) pada bila-bila masa melalui Tetapan peranti Android anda.</li>
+          <li><strong>Hak Pemohonan Manual:</strong> Untuk permintaan pemadaman data berkaitan pembelian atau akaun pihak ketiga, hubungi kami di <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a>.</li>
+        </ul>
+        <div class="notice">&#128231; Kami akan membalas setiap permintaan berkaitan data dalam tempoh <strong>7 hari bekerja</strong>.</div>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128272;</span> 8. Keselamatan Data</h2>
+        <p>Walaupun tiada kaedah penghantaran atau penyimpanan elektronik yang 100% selamat, kami mengambil langkah-langkah yang munasabah untuk melindungi data anda:</p>
+        <ul>
+          <li>Data pengguna disimpan secara setempat dalam peranti anda dan tidak dihantar ke pelayan luar.</li>
+          <li>Komunikasi dengan API pihak ketiga (e-Solat) menggunakan protokol HTTPS yang disulitkan.</li>
+          <li>Tiada kata laluan atau maklumat peribadi sensitif dikumpul oleh aplikasi.</li>
+        </ul>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128118;</span> 9. Perlindungan Privasi Kanak-kanak</h2>
+        <p>Aplikasi NurQuran sesuai untuk semua peringkat umur termasuk kanak-kanak. Kami <strong>tidak</strong> dengan sengaja mengumpul sebarang maklumat peribadi daripada kanak-kanak bawah umur 13 tahun. Jika anda percaya bahawa kanak-kanak telah memberikan maklumat peribadi kepada kami, sila hubungi kami dengan segera di <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a> dan kami akan mengambil tindakan segera.</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128260;</span> 10. Perubahan Dasar Privasi</h2>
+        <p>Kami berhak untuk mengemas kini Dasar Privasi ini dari semasa ke semasa. Sebarang perubahan material akan dimaklumkan melalui:</p>
+        <ul>
+          <li>Notifikasi dalam aplikasi NurQuran</li>
+          <li>Kemas kini pada halaman web Dasar Privasi ini (dengan tarikh kuat kuasa baharu)</li>
+          <li>Pemberitahuan melalui penyenaraian Google Play Store / Huawei AppGallery</li>
+        </ul>
+        <p>Penggunaan berterusan aplikasi selepas perubahan tersebut berkuat kuasa dianggap sebagai penerimaan anda terhadap Dasar Privasi yang dikemas kini.</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#9878;&#65039;</span> 11. Undang-undang yang Terpakai</h2>
+        <p>Dasar Privasi ini dikawal oleh undang-undang Malaysia, khususnya <strong>Akta Perlindungan Data Peribadi 2010 (PDPA)</strong>. Bagi pengguna di luar Malaysia, kami berusaha memenuhi keperluan perlindungan data yang berkaitan di negara anda.</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#9993;&#65039;</span> 12. Hubungi Pembangun</h2>
+        <p>Sekiranya anda mempunyai sebarang pertanyaan, maklum balas atau aduan mengenai Dasar Privasi ini atau pengendalian data anda, sila hubungi kami:</p>
+        <div class="dev-box">
+          <p><strong>Nama:</strong> ZULFIKAR BIN AZIZUL</p>
+          <p><strong>Emel:</strong> <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+          <p><strong>Masa Respons:</strong> Dalam tempoh 7 hari bekerja</p>
+        </div>
       </div>
     </div>
+    <!-- END: Bahasa Melayu -->
 
-    <!-- ======================================================== -->
-    <!-- 🇬🇧 ENGLISH CONTENT                                      -->
-    <!-- ======================================================== -->
+    <!-- ================================================================ -->
+    <!-- ENGLISH CONTENT                                                   -->
+    <!-- ================================================================ -->
     <div id="content-en" class="lang-content">
-      <div class="effective-badge">Effective Date: September 1, 2026</div>
+      <div class="effective-badge">&#128197; Effective Date: September 1, 2026</div>
 
       <div class="section-card">
-        <h2>1. Introduction & Developer Identity</h2>
-        <p>The <strong>NurQuran</strong> application is developed and operated by <strong>ZULFIKAR BIN AZIZUL</strong> ("Developer"). We are committed to protecting your personal privacy. This Privacy Policy outlines how data is handled within NurQuran distributed via Huawei AppGallery.</p>
+        <h2><span class="icon">&#128203;</span> 1. Introduction &amp; Developer Identity</h2>
+        <p>The <strong>NurQuran</strong> application is developed and maintained solely by <strong>ZULFIKAR BIN AZIZUL</strong> ("Developer"), an independent developer based in Malaysia. We are fully committed to protecting your privacy and handling your data transparently.</p>
+        <p>This Privacy Policy explains in detail how your data is collected, used, stored and protected when you use the NurQuran app, distributed via the <strong>Google Play Store</strong> and <strong>Huawei AppGallery</strong>.</p>
+        <p>By downloading or using NurQuran, you agree to the terms outlined in this Privacy Policy.</p>
         <div class="dev-box">
           <p><strong>Official Developer:</strong> ZULFIKAR BIN AZIZUL</p>
           <p><strong>Application:</strong> NurQuran</p>
           <p><strong>Official Contact:</strong> <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+          <p><strong>Country:</strong> Malaysia</p>
         </div>
       </div>
 
       <div class="section-card">
-        <h2>2. Data Collection Purpose: App Functionality</h2>
-        <p>Our app processes minimal data strictly for <strong>App Functionality</strong> purposes to support your religious worship:</p>
+        <h2><span class="icon">&#128230;</span> 2. Data We Collect</h2>
+        <p>NurQuran does <strong>not collect</strong> any personally identifiable information directly. The following data may be processed locally or by third-party services:</p>
         <ul>
-          <li><strong>Location Information (Precise & Approximate GPS):</strong> Used solely to calculate accurate Malaysian prayer times (JAKIM) and determine the exact Qibla compass bearing towards Makkah. Data is processed locally on your device and is <em>not linked to user identity</em>.</li>
-          <li><strong>Photos & Media Access:</strong> Accessed only when you voluntarily select an image to use as your profile avatar. Images remain stored locally on your device.</li>
+          <li><strong>Location Data (GPS):</strong> Coordinates are processed locally on-device for prayer times &amp; Qibla direction. Never stored on external servers.</li>
+          <li><strong>App Usage Data:</strong> Bookmarks, Khatam progress, Tasbih records, font preferences — stored exclusively on your device.</li>
+          <li><strong>Purchase Information:</strong> Managed entirely by Google Play Billing or Huawei IAP. We do not receive or store your financial data.</li>
+          <li><strong>Crash Diagnostic Data:</strong> Via Expo / React Native, anonymised error reports may be shared to help improve the app.</li>
         </ul>
-        <p class="notice">* This application does NOT collect data for behavioral analytics, product personalization, cross-border data transfer, or third-party disclosure.</p>
+        <div class="notice">&#9989; NurQuran does not require account registration and does not store your name, email address, phone number, or other personal data on our servers.</div>
       </div>
 
       <div class="section-card">
-        <h2>3. No Third-Party Commercial Ads</h2>
-        <p>The NurQuran app operates <strong>without third-party advertising networks</strong>. We do not collect or track device advertising identifiers (such as OAID) for commercial marketing.</p>
+        <h2><span class="icon">&#128737;&#65039;</span> 3. App Permissions &amp; Their Purpose</h2>
+        <p>The table below explains every Android permission used by NurQuran:</p>
+        <table class="perm-table">
+          <tr>
+            <th>Permission</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
+            <td>Determine your JAKIM prayer time zone &amp; calculate the exact Qibla compass bearing toward the Kaaba.</td>
+          </tr>
+          <tr>
+            <td><code>POST_NOTIFICATIONS</code></td>
+            <td>Send prayer time reminder notifications to you.</td>
+          </tr>
+          <tr>
+            <td><code>SCHEDULE_EXACT_ALARM</code><br><code>USE_EXACT_ALARM</code></td>
+            <td>Schedule the Adhan alarm to fire at the precise prayer time.</td>
+          </tr>
+          <tr>
+            <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+            <td>Restore scheduled Adhan alarms after your device restarts.</td>
+          </tr>
+          <tr>
+            <td><code>INTERNET</code></td>
+            <td>Connect to the prayer times API (e-solat.com.my) &amp; download app content updates when needed.</td>
+          </tr>
+          <tr>
+            <td><code>VIBRATE</code></td>
+            <td>Optional vibration when an Adhan notification is received.</td>
+          </tr>
+        </table>
+        <div class="notice">&#9888;&#65039; No permissions are used for advertising, ad-tracking, or user profiling purposes.</div>
       </div>
 
       <div class="section-card">
-        <h2>4. Notifications & Prayer Alarms</h2>
-        <p>We utilize <em>POST_NOTIFICATIONS</em> and <em>SCHEDULE_EXACT_ALARM</em> permissions exclusively to schedule prayer alerts and play the Adhan punctually. These settings can be customized or disabled anytime in the app settings.</p>
+        <h2><span class="icon">&#128190;</span> 4. Local Data Storage</h2>
+        <p>All data generated by your use of this app is stored <strong>exclusively on your device</strong> using <em>AsyncStorage</em> (React Native) and local SQLite. This includes:</p>
+        <ul>
+          <li>Quran verse &amp; surah Bookmarks</li>
+          <li>Khatam Al-Quran completion history</li>
+          <li>Tasbih &amp; daily Dhikr counter records</li>
+          <li>Arabic font &amp; text size preferences</li>
+          <li>Personal settings &amp; colour theme preferences</li>
+        </ul>
+        <p>This data is <strong>never transmitted</strong> to any external server without your explicit consent.</p>
       </div>
 
       <div class="section-card">
-        <h2>5. Secure Purchases via Huawei Pay (IAP)</h2>
-        <p>Purchases of the NurQuran PRO lifetime license are processed securely through official <strong>Huawei In-App Purchases (Huawei IAP / Huawei Pay)</strong> services. Neither the app nor the developer collects, accesses, or stores your banking credentials or payment card numbers.</p>
+        <h2><span class="icon">&#128279;</span> 5. Third-Party Services</h2>
+        <p>NurQuran may interact with the following third-party services. Each service operates under its own Privacy Policy:</p>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128309;</div>
+          <div>
+            <div class="tp-name">Google Play Billing</div>
+            <div class="tp-desc">Processes NurQuran PRO purchase transactions. Privacy Policy: <a class="email-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128308;</div>
+          <div>
+            <div class="tp-name">Huawei In-App Purchases (IAP)</div>
+            <div class="tp-desc">Processes purchase transactions for Huawei AppGallery users. Privacy Policy: <a class="email-link" href="https://consumer.huawei.com/en/privacy/privacy-policy/" target="_blank">consumer.huawei.com</a></div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128994;</div>
+          <div>
+            <div class="tp-name">e-Solat API (JAKIM)</div>
+            <div class="tp-desc">Official Malaysian prayer times API by JAKIM. Only zone coordinates are transmitted to retrieve prayer schedules.</div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#9899;</div>
+          <div>
+            <div class="tp-name">Expo / React Native</div>
+            <div class="tp-desc">App development framework. Anonymous diagnostic reports may be collected to improve the technology. Privacy Policy: <a class="email-link" href="https://expo.dev/privacy" target="_blank">expo.dev/privacy</a></div>
+          </div>
+        </div>
+
+        <div class="notice">&#128274; We do not use any advertising SDKs (such as AdMob, Meta Ads) or user tracking SDKs.</div>
       </div>
 
       <div class="section-card">
-        <h2>6. Local Storage & Data Deletion Rights</h2>
-        <p>All Quranic reading progress, bookmarks, digital Tasbih counts, and Khatam tracker data are stored strictly within your local device memory (<em>AsyncStorage</em>). You can permanently delete all local data at any time via <strong>Profile &gt; Factory Reset Data</strong>.</p>
+        <h2><span class="icon">&#128179;</span> 6. Secure In-App Purchases (NurQuran PRO)</h2>
+        <p>All financial transactions for the <strong>NurQuran PRO</strong> lifetime license are processed securely through official third-party platforms:</p>
+        <ul>
+          <li><strong>Google Play Billing</strong> — for Android users via the Google Play Store</li>
+          <li><strong>Huawei In-App Purchases (IAP)</strong> — for Huawei AppGallery users</li>
+        </ul>
+        <p>The Developer <strong>never</strong> sees, stores, or processes your credit/debit card number or any financial credentials. For any billing disputes, please contact Google Play or Huawei directly.</p>
       </div>
 
       <div class="section-card">
-        <h2>7. Contact the Developer</h2>
-        <p>If you have any questions, inquiries, or feedback regarding this Privacy Policy, please contact the developer directly at:</p>
-        <p><strong>Developer:</strong> ZULFIKAR BIN AZIZUL</p>
-        <p>✉️ <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+        <h2><span class="icon">&#128465;&#65039;</span> 7. Your Rights &amp; Data Deletion</h2>
+        <p>You have full control over your personal data. Your rights include:</p>
+        <ul>
+          <li><strong>Right to Access:</strong> You can view all data stored in the app at any time.</li>
+          <li><strong>Right to Deletion:</strong> You can erase all data (bookmarks, dhikr records, reading history) via <strong>Profile &gt; Reset Data</strong> within the app.</li>
+          <li><strong>Right to Withdraw Consent:</strong> You can revoke any permission (location, notifications) at any time via your Android device Settings.</li>
+          <li><strong>Manual Deletion Request:</strong> For data deletion requests related to third-party accounts or purchases, contact us at <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a>.</li>
+        </ul>
+        <div class="notice">&#128231; We will respond to all data-related requests within <strong>7 business days</strong>.</div>
       </div>
-    </div>
-
-    <!-- ======================================================== -->
-    <!-- 🇨🇳 中文内容 (CHINESE CONTENT)                             -->
-    <!-- ======================================================== -->
-    <div id="content-zh" class="lang-content">
-      <div class="effective-badge">生效日期：2026年9月1日</div>
 
       <div class="section-card">
-        <h2>1. 引言与开发者信息</h2>
-        <p><strong>NurQuran</strong> 应用程序由独立开发者 <strong>ZULFIKAR BIN AZIZUL</strong>（“开发者”）全权开发并维护。我们全力保护您的个人隐私。本隐私政策旨在向您说明在通过华为应用市场（Huawei AppGallery）使用 NurQuran 时的数据处理方式。</p>
+        <h2><span class="icon">&#128272;</span> 8. Data Security</h2>
+        <p>While no electronic transmission or storage method is 100% secure, we take reasonable steps to protect your data:</p>
+        <ul>
+          <li>User data is stored locally on your device and not transmitted to external servers.</li>
+          <li>Communications with third-party APIs (e-Solat) use encrypted HTTPS protocols.</li>
+          <li>No passwords or sensitive personal information is collected by the app.</li>
+        </ul>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128118;</span> 9. Children's Privacy</h2>
+        <p>The NurQuran application is suitable for all age groups, including children. We do <strong>not</strong> knowingly collect any personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us immediately at <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a> and we will take prompt action to remove such information.</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128260;</span> 10. Changes to This Privacy Policy</h2>
+        <p>We reserve the right to update this Privacy Policy periodically. Any material changes will be communicated via:</p>
+        <ul>
+          <li>In-app notification within NurQuran</li>
+          <li>An updated Effective Date on this Privacy Policy page</li>
+          <li>App listing update notices on Google Play Store / Huawei AppGallery</li>
+        </ul>
+        <p>Your continued use of the app after any changes take effect constitutes your acceptance of the revised Privacy Policy.</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#9878;&#65039;</span> 11. Governing Law</h2>
+        <p>This Privacy Policy is governed by the laws of Malaysia, particularly the <strong>Personal Data Protection Act 2010 (PDPA)</strong>. For users outside Malaysia, we endeavour to meet applicable data protection requirements in your jurisdiction.</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#9993;&#65039;</span> 12. Contact the Developer</h2>
+        <p>If you have any questions, feedback, or concerns about this Privacy Policy or the handling of your data, please contact us:</p>
         <div class="dev-box">
-          <p><strong>官方开发者：</strong> ZULFIKAR BIN AZIZUL</p>
-          <p><strong>应用程序：</strong> NurQuran</p>
-          <p><strong>官方支持邮箱：</strong> <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+          <p><strong>Developer:</strong> ZULFIKAR BIN AZIZUL</p>
+          <p><strong>Email:</strong> <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+          <p><strong>Response Time:</strong> Within 7 business days</p>
+        </div>
+      </div>
+    </div>
+    <!-- END: English -->
+
+    <!-- ================================================================ -->
+    <!-- CHINESE CONTENT                                                   -->
+    <!-- ================================================================ -->
+    <div id="content-zh" class="lang-content">
+      <div class="effective-badge">&#128197; &#29983;&#25928;&#26085;&#26399;&#65306;2026&#24180;9&#26376;1&#26085;</div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128203;</span> 1. &#24341;&#35328;&#19982;&#24320;&#21457;&#32773;&#20449;&#24687;</h2>
+        <p><strong>NurQuran</strong> &#24212;&#29992;&#31243;&#24207;&#30001;&#26469;&#33258;&#39551;&#26469;&#35199;&#20122;&#30340;&#29420;&#31435;&#24320;&#21457;&#32773; <strong>ZULFIKAR BIN AZIZUL</strong>&#65288;&#8220;&#24320;&#21457;&#32773;&#8221;&#65289;&#20840;&#26435;&#24320;&#21457;&#24182;&#32500;&#25252;&#12290;&#25105;&#20204;&#39640;&#24230;&#37325;&#35270;&#24182;&#20840;&#21147;&#20445;&#25252;&#24744;&#30340;&#20491;&#20154;&#38544;&#31192;&#12290;</p>
+        <p>&#26412;&#38544;&#31192;&#25919;&#31574;&#35814;&#32454;&#35828;&#26126;&#20102;&#24744;&#22312;&#20351;&#29992;&#36890;&#36807; <strong>Google Play &#21830;&#24215;</strong>&#21450;<strong>&#21326;&#20026;&#24212;&#29992;&#24066;&#22330;&#65288;Huawei AppGallery&#65289;</strong>&#21457;&#24067;&#30340; NurQuran &#24212;&#29992;&#31243;&#24207;&#26102;&#65292;&#24744;&#30340;&#25968;&#25454;&#22914;&#20309;&#34987;&#25910;&#38598;&#12289;&#20351;&#29992;&#12289;&#23384;&#20648;&#21644;&#20445;&#25252;&#12290;</p>
+        <p>&#19979;&#36733;&#25110;&#20351;&#29992; NurQuran&#65292;&#21363;&#34920;&#31034;&#24744;&#21516;&#24847;&#26412;&#38544;&#31192;&#25919;&#31574;&#30340;&#26465;&#27454;&#12290;</p>
+        <div class="dev-box">
+          <p><strong>&#23448;&#26041;&#24320;&#21457;&#32773;&#65306;</strong>ZULFIKAR BIN AZIZUL</p>
+          <p><strong>&#24212;&#29992;&#31243;&#24207;&#65306;</strong>NurQuran</p>
+          <p><strong>&#23448;&#26041;&#32852;&#31995;&#37038;&#31665;&#65306;</strong><a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+          <p><strong>&#25152;&#22312;&#22269;&#23478;&#65306;</strong>&#39551;&#26469;&#35199;&#20122;</p>
         </div>
       </div>
 
       <div class="section-card">
-        <h2>2. 数据收集目的：应用功能 (App Functionality)</h2>
-        <p>本应用仅出于<strong>应用功能 (App Functionality)</strong> 的必要性处理极简数据，以协助您的日常功修：</p>
+        <h2><span class="icon">&#128230;</span> 2. &#25105;&#20204;&#25910;&#38598;&#30340;&#25968;&#25454;</h2>
+        <p>NurQuran <strong>&#19981;&#20250;&#30452;&#25509;&#25910;&#38598;</strong>&#20219;&#20309;&#21487;&#35782;&#21035;&#24744;&#20491;&#20154;&#36523;&#20221;&#30340;&#20449;&#24687;&#12290;&#20197;&#19979;&#25968;&#25454;&#21487;&#33021;&#22312;&#26412;&#22320;&#22788;&#29702;&#25110;&#30001;&#31532;&#19977;&#26041;&#26381;&#21153;&#22788;&#29702;&#65306;</p>
         <ul>
-          <li><strong>地理位置信息 (精准与大致 GPS)：</strong> 仅用于根据您当前位置计算马来西亚官方（JAKIM）礼拜时间以及精准测算麦加朝向（朝向指南针）。数据仅在手机本地实时运算，<em>不与任何用户个人身份信息相关联</em>。</li>
-          <li><strong>相册与图片访问权限 (Photos)：</strong> 仅在您自主选择更换个人头像图片时使用。图片仅保存在您的手机本地存储中。</li>
+          <li><strong>&#20301;&#32622;&#25968;&#25454;&#65288;GPS&#65289;&#65306;</strong>&#22352;&#26631;&#22312;&#35774;&#22791;&#26412;&#22320;&#22788;&#29702;&#65292;&#29992;&#20110;&#31036;&#25308;&#26102;&#38388;&#21644;&#26254;&#21521;&#35745;&#31639;&#65292;&#32477;&#19981;&#19978;&#20256;&#33267;&#22806;&#37096;&#26381;&#21153;&#22120;&#12290;</li>
+          <li><strong>&#24212;&#29992;&#20351;&#29992;&#25968;&#25454;&#65306;</strong>&#20070;&#31614;&#12289;&#36890;&#35835;&#36827;&#24230;&#12289;&#36139;&#24565;&#35760;&#24405;&#12289;&#23383;&#20307;&#20559;&#22909;&#8212;&#8212;&#20165;&#23384;&#20648;&#20110;&#24744;&#30340;&#35774;&#22791;&#26412;&#22320;&#12290;</li>
+          <li><strong>&#36141;&#36141;&#20449;&#24687;&#65306;</strong>&#23436;&#20840;&#30001; Google Play &#32467;&#31639;&#25110;&#21326;&#20026; IAP &#31649;&#29702;&#65292;&#25105;&#20204;&#19981;&#25509;&#25910;&#20063;&#19981;&#23384;&#20648;&#24744;&#30340;&#36134;&#21153;&#25968;&#25454;&#12290;</li>
+          <li><strong>&#23569;&#39064;&#35740;&#26029;&#25968;&#25454;&#65306;</strong>&#36890;&#36807; Expo / React Native &#26694;&#26550;&#65292;&#21487;&#33021;&#20250;&#21324;&#21517;&#20998;&#20139;&#38169;&#35823;&#25253;&#21578;&#20197;&#24110;&#21161;&#25913;&#21892;&#24212;&#29992;&#12290;</li>
         </ul>
-        <p class="notice">* 本应用不收集任何数据用于行为分析 (Analytics)、个性化推荐 (Product Personalization)、跨境传输或向第三方共享。</p>
+        <div class="notice">&#9989; NurQuran &#19981;&#35201;&#27714;&#36134;&#21495;&#27880;&#20876;&#65292;&#19981;&#20250;&#22312;&#25105;&#20204;&#30340;&#26381;&#21153;&#22120;&#19978;&#23384;&#20648;&#24744;&#30340;&#22995;&#21517;&#12289;&#30005;&#23376;&#37038;&#20214;&#12289;&#25163;&#26426;&#21495;&#25110;&#20854;&#20182;&#20491;&#20154;&#20449;&#24687;&#12290;</div>
       </div>
 
       <div class="section-card">
-        <h2>3. 无第三方商业广告</h2>
-        <p>NurQuran 应用程序<strong>未集成任何第三方商业广告 SDK</strong>。我们不收集也不追踪您的设备广告标识符（如 OAID）用于商业营销推广。</p>
+        <h2><span class="icon">&#128737;&#65039;</span> 3. &#24212;&#29992;&#26435;&#38480;&#21450;&#20854;&#29992;&#36884;</h2>
+        <p>&#19979;&#34920;&#35828;&#26126;&#20102; NurQuran &#20351;&#29992;&#30340;&#27599;&#39033; Android &#26435;&#38480;&#65306;</p>
+        <table class="perm-table">
+          <tr>
+            <th>&#26435;&#38480;</th>
+            <th>&#29992;&#36884;</th>
+          </tr>
+          <tr>
+            <td><code>ACCESS_FINE_LOCATION</code><br><code>ACCESS_COARSE_LOCATION</code></td>
+            <td>&#26681;&#25454;&#24744;&#24403;&#21069;&#30340;&#22320;&#29702;&#22352;&#26631;&#30830;&#23450; JAKIM &#31036;&#25308;&#26102;&#38388;&#21306;&#22495;&#24182;&#31934;&#30830;&#35745;&#31639;&#26254;&#21521;&#40614;&#21152;&#20811;&#23572;&#30340;&#26041;&#20301;&#12290;</td>
+          </tr>
+          <tr>
+            <td><code>POST_NOTIFICATIONS</code></td>
+            <td>&#21521;&#24744;&#21457;&#36865;&#31036;&#25308;&#26102;&#38388;&#25552;&#37266;&#36890;&#30693;&#12290;</td>
+          </tr>
+          <tr>
+            <td><code>SCHEDULE_EXACT_ALARM</code><br><code>USE_EXACT_ALARM</code></td>
+            <td>&#22312;&#31934;&#30830;&#30340;&#31036;&#25308;&#26102;&#38388;&#35302;&#21457;&#23459;&#31036;&#65288;Adhan&#65289;&#38053;&#38047;&#12290;</td>
+          </tr>
+          <tr>
+            <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+            <td>&#35774;&#22791;&#37325;&#21551;&#21518;&#33258;&#21160;&#24674;&#22797;&#24050;&#35745;&#21010;&#30340;&#23459;&#31036;&#38053;&#38047;&#12290;</td>
+          </tr>
+          <tr>
+            <td><code>INTERNET</code></td>
+            <td>&#36830;&#25509;&#31036;&#25308;&#26102;&#38388; API&#65288;e-solat.com.my&#65289;&#21450;&#22312;&#38656;&#35201;&#26102;&#19979;&#36733;&#24212;&#29992;&#20869;&#23481;&#26356;&#26032;&#12290;</td>
+          </tr>
+          <tr>
+            <td><code>VIBRATE</code></td>
+            <td>&#25910;&#21040;&#23459;&#31036;&#36890;&#30693;&#26102;&#21487;&#36873;&#25321;&#25391;&#21160;&#25552;&#31034;&#12290;</td>
+          </tr>
+        </table>
+        <div class="notice">&#9888;&#65039; &#25152;&#26377;&#26435;&#38480;&#22343;&#19981;&#29992;&#20110;&#24191;&#21578;&#25237;&#25918;&#12289;&#24191;&#21578;&#36861;&#36284;&#25110;&#29992;&#25143;&#30011;&#20687;&#20998;&#26512;&#30446;&#30340;&#12290;</div>
       </div>
 
       <div class="section-card">
-        <h2>4. 通知推送与宣礼提醒</h2>
-        <p>本应用请求 <em>POST_NOTIFICATIONS</em> 与精确定时权限（<em>SCHEDULE_EXACT_ALARM</em>）用于准时向您推送入礼通知及播放宣礼音频。您可随时在应用设置中开启或关闭此功能。</p>
+        <h2><span class="icon">&#128190;</span> 4. &#26412;&#22320;&#25968;&#25454;&#23384;&#20648;</h2>
+        <p>&#24744;&#20351;&#29992;&#26412;&#24212;&#29992;&#20135;&#29983;&#30340;&#25152;&#26377;&#25968;&#25454;&#22343;<strong>&#23436;&#20840;&#23384;&#20648;&#22312;&#24744;&#30340;&#35774;&#22791;&#26412;&#22320;</strong>&#65292;&#20351;&#29992; <em>AsyncStorage</em>&#65288;React Native&#65289;&#21644;&#26412;&#22320; SQLite &#25968;&#25454;&#24211;&#12290;&#36825;&#21253;&#25324;&#65306;</p>
+        <ul>
+          <li>&#21476;&#20兰;&#32463;&#32463;&#25991;&#19982;&#31456;&#33410;&#20070;&#31614;</li>
+          <li>&#36890;&#35835;&#65288;Khatam&#65289;&#21476;&#20848;&#32199;&#30340;&#23436;&#25104;&#21382;&#21490;</li>
+          <li>&#36139;&#24565;&#65288;Tasbih&#65289;&#21450;&#27ỗ&#26085;&#36895;&#20959;&#32988;&#35745;&#25968;&#35760;&#24405;</li>
+          <li>&#38063;&#25289;&#20182;&#23383;&#20307;&#19982;&#25991;&#23383;&#22823;&#23567;&#20559;&#22909;</li>
+          <li>&#20491;&#20154;&#35774;&#32622;&#19982;&#20027;&#39064;&#39068;&#33394;&#20559;&#22909;</li>
+        </ul>
+        <p>&#26410;&#32463;&#24744;&#30340;&#26126;&#30830;&#21516;&#24847;&#65292;&#36825;&#20123;&#25968;&#25454;<strong>&#32477;&#19981;&#20250;</strong>&#20253;&#36755;&#33267;&#20219;&#20309;&#22806;&#37096;&#26381;&#21153;&#22120;&#12290;</p>
       </div>
 
       <div class="section-card">
-        <h2>5. 华为应用内支付安全 (Huawei Pay / IAP)</h2>
-        <p>关于 NurQuran PRO 终身授权的所有购买交易均通过官方<strong>华为应用内支付（Huawei IAP / Huawei Pay）</strong>渠道处理。开发者不收集也不保存您的银行卡号或财务凭据。</p>
+        <h2><span class="icon">&#128279;</span> 5. &#31532;&#19977;&#26041;&#26381;&#21153;</h2>
+        <p>NurQuran &#21487;&#33021;&#19982;&#20197;&#19979;&#31532;&#19977;&#26041;&#26381;&#21153;&#36827;&#34892;&#20132;&#20114;&#12290;&#27ỗ&#39033;&#26381;&#21153;&#22343;&#26377;&#20854;&#33258;&#24049;&#30340;&#38544;&#31192;&#25919;&#31574;&#65306;</p>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128309;</div>
+          <div>
+            <div class="tp-name">Google Play Billing</div>
+            <div class="tp-desc">&#22788;&#29702; NurQuran PRO &#36141;&#36141;&#20132;&#26131;&#12290;&#38544;&#31192;&#25919;&#31574;&#65306;<a class="email-link" href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128308;</div>
+          <div>
+            <div class="tp-name">&#21326;&#20026;&#24212;&#29992;&#20869;&#36141;&#20080;&#65288;Huawei IAP&#65289;</div>
+            <div class="tp-desc">&#22788;&#29702;&#21326;&#20026;&#24212;&#29992;&#24066;&#22330;&#29992;&#25143;&#30340;&#36141;&#36141;&#20132;&#26131;&#12290;&#38544;&#31192;&#25919;&#31574;&#65306;<a class="email-link" href="https://consumer.huawei.com/en/privacy/privacy-policy/" target="_blank">consumer.huawei.com</a></div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#128994;</div>
+          <div>
+            <div class="tp-name">e-Solat API&#65288;JAKIM&#65289;</div>
+            <div class="tp-desc">&#30001; JAKIM &#25552;&#20379;&#30340;&#39551;&#26469;&#35199;&#20122;&#23448;&#26041;&#31036;&#25308;&#26102;&#38388; API&#12290;&#20165;&#21457;&#36865;&#21306;&#22495;&#22352;&#26631;&#20197;&#33719;&#21462;&#31036;&#25308;&#26102;&#38388;&#34920;&#12290;</div>
+          </div>
+        </div>
+
+        <div class="third-party-item">
+          <div class="tp-icon">&#9899;</div>
+          <div>
+            <div class="tp-name">Expo / React Native</div>
+            <div class="tp-desc">&#24212;&#29992;&#24320;&#21457;&#26694;&#26550;&#12290;&#21487;&#33021;&#25910;&#38598;&#21324;&#21517;&#35740;&#26029;&#25253;&#21578;&#20197;&#25913;&#21892;&#25216;&#26415;&#12290;&#38544;&#31192;&#25919;&#31574;&#65306;<a class="email-link" href="https://expo.dev/privacy" target="_blank">expo.dev/privacy</a></div>
+          </div>
+        </div>
+
+        <div class="notice">&#128274; &#25105;&#20204;&#19981;&#20351;&#29992;&#20219;&#20309;&#24191;&#21578; SDK&#65288;&#22914; AdMob&#12289;Meta Ads&#65289;&#25110;&#29992;&#25143;&#36861;&#36284; SDK&#12290;</div>
       </div>
 
       <div class="section-card">
-        <h2>6. 本地存储与数据删除权利</h2>
-        <p>您的古兰经阅读记录、书签收藏、赞念计数器（Tasbih）数据以及通读进度均仅保存在手机本地（<em>AsyncStorage</em>）中。您可以随时通过应用内的 <strong>个人中心 &gt; 恢复出厂设置</strong> 一键永久清除所有本地数据。</p>
+        <h2><span class="icon">&#128179;</span> 6. &#24212;&#29992;&#20869;&#36141;&#20080;&#19982;&#25903;&#20184;&#23433;&#20840;&#65288;NurQuran PRO&#65289;</h2>
+        <p><strong>NurQuran PRO</strong> &#32456;&#36523;&#25480;&#26435;&#30340;&#25152;&#26377;&#36134;&#21153;&#20132;&#26131;&#22343;&#36890;&#36807;&#23448;&#26041;&#31532;&#19977;&#26041;&#24179;&#21488;&#23433;&#20840;&#22788;&#29702;&#65306;</p>
+        <ul>
+          <li><strong>Google Play &#32467;&#31639;&#31995;&#32479;</strong>&#8212;&#8212;&#36866;&#29992;&#20110;&#36890;&#36807; Google Play &#21830;&#24215;&#30340; Android &#29992;&#25143;</li>
+          <li><strong>&#21326;&#20026;&#24212;&#29992;&#20869;&#25903;&#20184;&#65288;Huawei IAP&#65289;</strong>&#8212;&#8212;&#36866;&#29992;&#20110;&#21326;&#20026;&#24212;&#29992;&#24066;&#22330;&#29992;&#25143;</li>
+        </ul>
+        <p>&#24320;&#21457;&#32773;<strong>&#20174;&#19981;</strong>&#26597;&#30475;&#12289;&#23384;&#20648;&#25110;&#22788;&#29702;&#24744;&#30340;&#20449;&#29992;&#21345;/&#20110;&#35748;&#21345;&#21495;&#30721;&#25110;&#20219;&#20309;&#36134;&#21153;&#20449;&#29992;&#25454;&#12290;&#22914;&#26377;&#36134;&#21333;&#20105;&#35758;&#65292;&#35831;&#30452;&#25509;&#32852;&#31995; Google Play &#25110;&#21326;&#20026;&#12290;</p>
       </div>
 
       <div class="section-card">
-        <h2>7. 联系开发者</h2>
-        <p>如果您对本隐私政策有任何疑问、意见或反馈，请通过官方支持邮箱与开发者取得联系：</p>
-        <p><strong>开发者：</strong> ZULFIKAR BIN AZIZUL</p>
-        <p>✉️ <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+        <h2><span class="icon">&#128465;&#65039;</span> 7. &#24744;&#30340;&#26435;&#21033;&#19982;&#25968;&#25454;&#21024;&#38500;</h2>
+        <p>&#24744;&#23545;&#20491;&#20154;&#25968;&#25454;&#25320;&#26377;&#23436;&#20840;&#25511;&#21046;&#26435;&#12290;&#24744;&#30340;&#26435;&#21033;&#21253;&#25324;&#65306;</p>
+        <ul>
+          <li><strong>&#35775;&#38382;&#26435;&#65306;</strong>&#24744;&#21487;&#20197;&#38543;&#26102;&#26597;&#30475;&#24212;&#29992;&#20013;&#23384;&#20648;&#30340;&#25152;&#26377;&#25968;&#25454;&#12290;</li>
+          <li><strong>&#21024;&#38500;&#26435;&#65306;</strong>&#24744;&#21487;&#20197;&#36890;&#36807;&#24212;&#29992;&#20869;&#30340;<strong>&#20491;&#20154;&#20013;&#24515; &gt; &#37325;&#32622;&#25968;&#25454;</strong>&#38543;&#26102;&#28165;&#38500;&#25152;&#26377;&#25968;&#25454;&#65288;&#20070;&#31614;&#12289;&#36895;&#20959;&#35760;&#24405;&#12289;&#38405;&#35835;&#21382;&#21490;&#65289;&#12290;</li>
+          <li><strong>&#25764;&#22238;&#21516;&#24847;&#26435;&#65306;</strong>&#24744;&#21487;&#20197;&#38543;&#26102;&#36890;&#36807; Android &#35774;&#22791;&#35774;&#32622;&#25764;&#38144;&#20219;&#20309;&#26435;&#38480;&#65288;&#20301;&#32622;&#12289;&#36890;&#30693;&#65289;&#12290;</li>
+          <li><strong>&#25163;&#21160;&#21024;&#38500;&#35831;&#27714;&#65306;</strong>&#22914;&#38656;&#21024;&#38500;&#19982;&#31532;&#19977;&#26041;&#36134;&#25143;&#25110;&#36141;&#36141;&#30456;&#20851;&#30340;&#25968;&#25454;&#65292;&#35831;&#21457;&#36865;&#37038;&#20214;&#33267; <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a>&#12290;</li>
+        </ul>
+        <div class="notice">&#128231; &#25105;&#20204;&#23558;&#22312;<strong>7&#20491;&#24037;&#20316;&#26085;</strong>&#20869;&#22238;&#22797;&#25152;&#26377;&#19982;&#25968;&#25454;&#30456;&#20851;&#30340;&#35831;&#27714;&#12290;</div>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128272;</span> 8. &#25968;&#25454;&#23433;&#20840;</h2>
+        <p>&#23613;&#31649;&#27809;&#26377;&#20219;&#20309;&#30005;&#23376;&#20256;&#36755;&#25110;&#23384;&#20648;&#26041;&#24335;&#26159;&#30334;&#20998;&#20043;&#30334;&#23433;&#20840;&#30340;&#65292;&#25105;&#20204;&#20仍;&#37319;&#21462;&#21512;&#29702;&#25514;&#26045;&#20445;&#25252;&#24744;&#30340;&#25968;&#25454;&#65306;</p>
+        <ul>
+          <li>&#29992;&#25143;&#25968;&#25454;&#23384;&#20648;&#22312;&#24744;&#30340;&#35774;&#22791;&#26412;&#22320;&#65292;&#19981;&#20256;&#36755;&#33267;&#22806;&#37096;&#26381;&#21153;&#22120;&#12290;</li>
+          <li>&#19982;&#31532;&#19977;&#26041; API&#65288;e-Solat&#65289;&#30340;&#36890;&#20449;&#20351;&#29992;&#21152;&#23494;&#30340; HTTPS &#21327;&#35758;&#12290;</li>
+          <li>&#24212;&#29992;&#19981;&#25910;&#38598;&#20219;&#20309;&#23494;&#30721;&#25110;&#25945;&#24863;&#20491;&#20154;&#20449;&#24687;&#12290;</li>
+        </ul>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128118;</span> 9. &#20816;&#31461;&#38544;&#31192;&#20445;&#25252;</h2>
+        <p>NurQuran &#36866;&#21512;&#25152;&#26377;&#24180;&#40836;&#27uan;&#20351;&#29992;&#65292;&#21253;&#25324;&#20816;&#31461;&#12290;&#25105;&#20204;<strong>&#19981;&#20250;</strong>&#25545;&#24847;&#25910;&#38598;13&#23681;&#20197;&#19979;&#20816;&#31461;&#30340;&#20219;&#20309;&#20491;&#20154;&#20449;&#24687;&#12290;&#22914;&#26524;&#24744;&#35748;&#20026;&#26576;&#20491;&#20816;&#31461;&#21521;&#25105;&#20204;&#25552;&#20379;&#20102;&#20491;&#20154;&#20449;&#24687;&#65292;&#35831;&#31435;&#21363;&#36890;&#36807; <a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a> &#32852;&#31995;&#25105;&#20204;&#65292;&#25105;&#20204;&#23558;&#31435;&#21363;&#37319;&#21462;&#25514;&#26045;&#21024;&#38500;&#30456;&#20851;&#20449;&#24687;&#12290;</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#128260;</span> 10. &#38544;&#31192;&#25919;&#31574;&#30340;&#21464;&#26356;</h2>
+        <p>&#25105;&#20204;&#20445;&#30041;&#23450;&#26399;&#26356;&#26032;&#26412;&#38544;&#31192;&#25919;&#31574;&#30340;&#26435;&#21033;&#12290;&#20219;&#20309;&#37325;&#22823;&#21464;&#26356;&#23558;&#36890;&#36807;&#20197;&#19979;&#26041;&#24335;&#21578;&#30693;&#65306;</p>
+        <ul>
+          <li>NurQuran &#24212;&#29992;&#20869;&#36890;&#30693;</li>
+          <li>&#26356;&#26032;&#26412;&#38544;&#31192;&#25919;&#31574;&#39029;&#38754;&#19978;&#30340;&#29983;&#25928;&#26085;&#26399;</li>
+          <li>Google Play &#21830;&#24215; / &#21326;&#20026;&#24212;&#29992;&#24066;&#22330;&#30340;&#24212;&#29992;&#21015;&#34920;&#26356;&#26032;&#35828;&#26126;</li>
+        </ul>
+        <p>&#21464;&#26356;&#29983;&#25928;&#21518;&#32487;&#32493;&#20351;&#29992;&#26412;&#24212;&#29992;&#65292;&#21363;&#35270;&#20026;&#24744;&#25509;&#21463;&#26356;&#26032;&#21518;&#30340;&#38544;&#31192;&#25919;&#31574;&#12290;</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#9878;&#65039;</span> 11. &#36866;&#29992;&#27861;&#24459;</h2>
+        <p>&#26412;&#38544;&#31192;&#25919;&#31574;&#21463;&#39551;&#26469;&#35199;&#20122;&#27861;&#24459;&#31649;&#36758;&#65292;&#29305;&#21035;&#26159;<strong>&#12298;2010&#24180;&#20491;&#20154;&#25968;&#25454;&#20445;&#25252;&#27861;&#12299;&#65288;PDPA&#65289;</strong>&#12290;&#23545;&#20110;&#39551;&#26469;&#35199;&#20122;&#20197;&#22806;&#30340;&#29992;&#25143;&#65292;&#25105;&#20204;&#33268;&#21147;&#28385;&#36275;&#24744;&#25152;&#22312;&#21496;&#27861;&#31649;&#36758;&#21306;&#36866;&#29992;&#30340;&#25968;&#25454;&#20445;&#25252;&#35201;&#27714;&#12290;</p>
+      </div>
+
+      <div class="section-card">
+        <h2><span class="icon">&#9993;&#65039;</span> 12. &#32852;&#31995;&#24320;&#21457;&#32773;</h2>
+        <p>&#22914;&#26524;&#24744;&#23545;&#26412;&#38544;&#31192;&#25919;&#31574;&#25110;&#24744;&#30340;&#25968;&#25454;&#22788;&#29702;&#26041;&#24335;&#26377;&#20219;&#20309;&#30097;&#38382;&#12289;&#21453;&#39304;&#25110;&#25295;&#35785;&#65292;&#35831;&#32852;&#31995;&#25105;&#20204;&#65306;</p>
+        <div class="dev-box">
+          <p><strong>&#24320;&#21457;&#32773;&#65306;</strong>ZULFIKAR BIN AZIZUL</p>
+          <p><strong>&#37038;&#31665;&#65306;</strong><a class="email-link" href="mailto:jomngaji.my@gmail.com">jomngaji.my@gmail.com</a></p>
+          <p><strong>&#21483;&#24212;&#26102;&#38388;&#65306;</strong>7&#20491;&#24037;&#20316;&#26085;&#20869;</p>
+        </div>
       </div>
     </div>
+    <!-- END: Chinese -->
 
     <footer>
-      &copy; 2026 NurQuran App &bull; Developed by ZULFIKAR BIN AZIZUL. All rights reserved.
+      &copy; 2026 NurQuran App &bull; Developed by ZULFIKAR BIN AZIZUL. All rights reserved.<br>
+      <small>Compliant with Google Play Store Developer Policy &amp; Malaysia PDPA 2010</small>
     </footer>
   </div>
 
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-content').forEach(function(el) { el.classList.remove('active'); });
+      document.querySelectorAll('.lang-btn').forEach(function(el) { el.classList.remove('active'); });
 
       document.getElementById('content-' + lang).classList.add('active');
 
-      const btns = document.querySelectorAll('.lang-btn');
+      var btns = document.querySelectorAll('.lang-btn');
       if (lang === 'ms') {
         btns[0].classList.add('active');
         document.getElementById('header-title').innerText = 'Dasar Privasi';
+        document.documentElement.lang = 'ms';
       } else if (lang === 'en') {
         btns[1].classList.add('active');
         document.getElementById('header-title').innerText = 'Privacy Policy';
+        document.documentElement.lang = 'en';
       } else if (lang === 'zh') {
         btns[2].classList.add('active');
-        document.getElementById('header-title').innerText = '隐私政策';
+        document.getElementById('header-title').innerText = '\u9690\u79c1\u653f\u7b56';
+        document.documentElement.lang = 'zh';
       }
     }
   </script>
